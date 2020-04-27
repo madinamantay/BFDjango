@@ -7,6 +7,7 @@ from django.db import models
 from ..auth_.models import MyUser
 from django.utils import timezone
 
+
 class TaskManager(models.Manager):
     def for_user(self, user):
         return self.filter(owner=user)
@@ -37,8 +38,8 @@ class Task(models.Model):
     objects = TaskManager()
 
     class Meta:
-        verbose_name = 'Task'
-        verbose_name_plural = 'Tasks'
+        verbose_name = 'Task item'
+        verbose_name_plural = 'Task items'
 
     def __str__(self):
         return f'{self.title}, in {self.list}'

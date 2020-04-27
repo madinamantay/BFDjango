@@ -128,10 +128,10 @@
     </leaf>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="266" />
+    <option name="x" value="265" />
     <option name="y" value="100" />
     <option name="width" value="1010" />
     <option name="height" value="980" />
@@ -142,7 +142,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -165,6 +164,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -197,7 +197,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="213" y="80" width="808" height="784" extended-state="0" />
+    <frame x="212" y="80" width="808" height="784" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.48963732" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />

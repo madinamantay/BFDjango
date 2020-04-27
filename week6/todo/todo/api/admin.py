@@ -10,4 +10,4 @@ class TaskListAdmin(admin.ModelAdmin):
 
 @admin.register(Task)
 class TaskAdmin(admin.ModelAdmin):
-    list_display = ('title', 'list', 'created_at', 'notes', 'is_done', )
+    list_display = ('title', 'list', 'created_at',  'is_done', 'notes',)

@@ -39,24 +39,26 @@ class MyAbstractUser(AbstractBaseUser, PermissionsMixin):
         ),
     )
     date_joined = models.DateTimeField(_('date joined'), default=timezone.now)
-
     objects = UserManager()
 
     EMAIL_FIELD = 'email'
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = ['email']
-
     class Meta:
         verbose_name = _('user')
+
         verbose_name_plural = _('users')
+
         abstract = True
 
     def clean(self):
         super().clean()
+
         self.email = self.__class__.objects.normalize_email(self.email)
 
     def get_full_name(self):
         full_name = '%s %s' % (self.first_name, self.last_name)
+
         return full_name.strip()
 
     def get_short_name(self):
@@ -65,8 +67,7 @@ class MyAbstractUser(AbstractBaseUser, PermissionsMixin):
     def email_user(self, subject, message, from_email=None, **kwargs):
         send_mail(subject, message, from_email, [self.email], **kwargs)
 
-
-class MyUser(AbstractUser):
+class MyUser(MyAbstractUser):
     pass
 #     is_editor = models.BooleanField(default=False)
 #     objects = MyUserManager()
